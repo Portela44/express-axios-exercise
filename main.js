@@ -7,7 +7,7 @@ const app = express();
 app.get('/pikachu', (req, res, next) => {
   axios.get("https://pokeapi.co/api/v2/pokemon/pikachu")
   .then((response) => {
-    response.json(response.data);
+    res.json(response.data);
   })
   .catch(err => console.log(err))
   .finally(() => {console.log("all done")})
